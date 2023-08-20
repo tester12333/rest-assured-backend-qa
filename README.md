@@ -1,32 +1,55 @@
-# rest-assured-backend-qa
+Project Description
+Welcome to our application repository. This project encompasses three distinct packages, each serving a specific purpose: Data, Request, and Test Cases.
 
-Name : Bassam Lahlouh 
-________________________________________________________________________
-In this app you can find 3 packages {Data , Requst and Test Cases}
+Data Package
+Within the Data package, you will find three essential classes:
 
-Data package has 3 classes:
- 1- DataProvider : this class method will return 3 test cases will be filed in postrequest body to test Date back end validation {Valid test , Date in past and To date greater than fron}
- Note we dont have back end validation on date by using secon and therd test cases
- 2-JasonReuse in this calss we are reusing JasonPath method
- 3-PayLoad has requests body and this tacke data from DataProvider class
+DataProvider: This class contains a method that furnishes three distinct test cases intended for populating the POST request body. These test cases facilitate the evaluation of backend date validation. The three scenarios include:
 
-Request package : has a requst (given,when,then)
+Valid test
+Date in the past
+To date greater than from date
+Notably, backend validation is absent for the second and third test cases.
 
-TestCase Package this has 2  test cases
- 1-GetTest here we are calling get request and make assertion validtion
- 2-PostTest here we are calling get request and make assertion validtion using the data provider
- 
-Reporting: you can find simple report in this path .\Bassam project\test-output\emailable-report.html or index.html OR 
-Or Allure Report by execute this comand "allure serve .\allure-results\" Using Powershell in project path
-__________________________________________________________________________
+JasonReuse: This class offers a method for reusing the JSONPath functionality.
 
-Note that to view allure report you need To install Allure :
- How to install Allure: 1- download and install Scoop 
-						2- and then execute in the Powershell: "scoop install allure"
- 
- How to install Scoop : 1- Open Powershell and execute "iwr -useb get.scoop.sh | iex"
-                        2- If you got an error regarding the execution policy execute "Set-ExecutionPolicy RemoteSigned -scope CurrentUser"
-						3- Now you ready to install allure and use it 
- 
- 
- 
+Payload: The Payload class provides a structured representation of request bodies, drawing data from the DataProvider class.
+
+Request Package
+The Request package houses a robust request structure, which adheres to the Given-When-Then paradigm, encompassing the following elements:
+
+Given: Setting up the preconditions for the test
+When: Initiating the specific action or operation
+Then: Validating the outcomes and results
+TestCase Package
+Within the TestCase package, you will discover two comprehensive test cases:
+
+GetTest: This test case involves the execution of a GET request and subsequent assertion validation.
+
+PostTest: Similar to the previous test, the PostTest scenario revolves around executing a GET request and performing assertion validation. Additionally, this test employs data from the DataProvider class to enhance test coverage.
+
+Reporting
+Our project incorporates two reporting options:
+
+Simple Report: You can access a straightforward report at the following path: ./Bassam project/test-output/emailable-report.html or index.html.
+
+Allure Report: To generate and view the comprehensive Allure Report, execute the following command in PowerShell, while in the project path: allure serve ./allure-results/.
+
+Allure Installation Instructions
+To take full advantage of the Allure Report, please follow these installation instructions:
+
+Download and install Scoop by executing the following command in PowerShell:
+
+arduino
+Copy code
+iwr -useb get.scoop.sh | iex
+If you encounter an execution policy error, resolve it by executing:
+
+sql
+Copy code
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+Install Allure via Scoop:
+
+Copy code
+scoop install allure
+With these steps completed, you are ready to enjoy the benefits of Allure and utilize it for your reporting needs.
