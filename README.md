@@ -16,5 +16,17 @@ TestCase Package this has 2  test cases
  1-GetTest here we are calling get request and make assertion validtion
  2-PostTest here we are calling get request and make assertion validtion using the data provider
  
-Also you can find simple report in this path .\Bassam project\test-output\emailable-report.html or index.html
+Reporting: you can find simple report in this path .\Bassam project\test-output\emailable-report.html or index.html OR 
+Or Allure Report by execute this comand "allure serve .\allure-results\" Using Powershell in project path
 __________________________________________________________________________
+
+Note that to view allure report you need To install Allure :
+ How to install Allure: 1- download and install Scoop 
+						2- and then execute in the Powershell: "scoop install allure"
+ 
+ How to install Scoop : 1- Open Powershell and execute "iwr -useb get.scoop.sh | iex"
+                        2- If you got an error regarding the execution policy execute "Set-ExecutionPolicy RemoteSigned -scope CurrentUser"
+						3- Now you ready to install allure and use it 
+ 
+ 
+ 
